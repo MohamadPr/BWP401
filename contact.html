@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اتصل بنا - دليل مدينة دمشق</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+        <link rel="icon" type="image/x-icon" href="./assets/img/icon.png">
+
+  </head>
+  <body>
+    <script>
+      (function () {
+        const theme = localStorage.getItem("theme");
+        if (theme === "dark") {
+          document.documentElement.setAttribute("data-bs-theme", "dark");
+        } else {
+          document.documentElement.setAttribute("data-bs-theme", "light");
+        }
+      })();
+    </script>
+  <header class="shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-navbar py-2">
+
+
+      <div class="container d-flex justify-content-between align-items-center">
+
+
+        <div> <a class="navbar-brand fw-bold text-light " href="index.html">
+            دليل مدينة دمشق
+          </a></div>
+
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link " href="index.html">الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.html">كل الفعاليات</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">عن الدليل</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">اتصل بنا</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Dark mode button -->
+        <button id="theme-toggle" class="btn btn-outline-light order-2 order-lg-1">
+          <i id="theme-icon" class="bi bi-moon-fill"></i>
+        </button>
+        <!-- Toggle button (mobile) -->
+        <button class="navbar-toggler text-light order-3" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+    <main class="container my-5">
+      <div class="text-center mb-5">
+        <h1>تواصل معنا</h1>
+        <p class="lead">نحن هنا للإجابة على استفساراتكم واقتراحاتكم.</p>
+      </div>
+
+<div class="row">
+  <div class="col-md-8 mx-auto">
+    <div id="form-alert-placeholder"></div>
+    <form id="contact-form" novalidate>
+      <div class="mb-3">
+        <label for="name" class="form-label">الاسم الكامل *</label>
+        <input type="text" class="form-control" id="name" required />
+        <div class="invalid-feedback">الرجاء إدخال اسمك.</div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">البريد الإلكتروني *</label>
+        <input type="email" class="form-control" id="email" required />
+        <div class="invalid-feedback">
+          الرجاء إدخال بريد إلكتروني صحيح.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">رقم الهاتف</label>
+        <input type="tel" class="form-control" id="phone" placeholder="+963 XXX XXX XXX" />
+      </div>
+      <div class="mb-3">
+        <label for="subject" class="form-label">الموضوع</label>
+        <select class="form-select" id="subject">
+          <option value="general">استفسار عام</option>
+          <option value="event">اقتراح فعالية</option>
+          <option value="partnership">شراكة</option>
+          <option value="technical">مشكلة تقنية</option>
+          <option value="other">أخرى</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">الرسالة *</label>
+        <textarea
+          class="form-control"
+          id="message"
+          rows="5"
+          required
+          placeholder="اكتب رسالتك هنا..."
+        ></textarea>
+        <div class="invalid-feedback">الرجاء كتابة رسالتك.</div>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">
+        📧 إرسال الرسالة
+      </button>
+    </form>
+  </div>
+</div>
+
+<section class="mt-5 section-animate fade-in-up delay-2">
+  <h2 class="text-center mb-4">الأسئلة الشائعة</h2>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <div class="card h-100 bg-light-box border-0">
+        <div class="card-body">
+          <h5 class="card-title">كيف يمكنني إضافة فعالية؟</h5>
+          <p class="card-text">يمكنك التواصل معنا عبر نموذج الاتصال أو البريد الإلكتروني مع تفاصيل الفعالية، وسنقوم بمراجعتها ونشرها خلال 48 ساعة.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="card h-100 bg-light-box border-0">
+        <div class="card-body">
+          <h5 class="card-title">هل الخدمة مجانية؟</h5>
+          <p class="card-text">نعم، جميع خدمات الدليل مجانية للمستخدمين ومنظمي الفعاليات. نهدف لدعم الحركة الثقافية في دمشق.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+
+<footer class="bg-dark text-white">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>دليل مدينة دمشق</h3>
+            <p>دليلك الشامل لاكتشاف أحدث الفعاليات في مدينة دمشق</p>
+        </div>
+        <div class="footer-section">
+            <h3>روابط سريعة</h3>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="events.html">الفعاليات</a></li>
+                <li><a href="about.html">عن الدليل</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>تواصل معنا</h3>
+            <p>📧 info@damascusguide.sy</p>
+            <p>📱 0963993898670</p>
+            <div class="social-links">
+                <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" title="Twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2025 دليل مدينة دمشق - الجمهورية العربية السورية. جميع الحقوق محفوظة.</p>
+    </div>
+</footer>
+
+    <button id="scroll-to-top" class="btn btn-primary rounded-circle shadow">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
