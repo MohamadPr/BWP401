@@ -9,6 +9,11 @@ function initializeCategoryFilter() {
     // Check if we're on the index page with category filter
     if (!categoryTabs.length || !eventsGrid) return;
     
+
+    // Get saved category from localStorage or default to 'all'
+    const savedCategory = localStorage.getItem('selectedCategory') || 'all';
+    
+
     // Function to filter events by category
     function filterEventsByCategory(category) {
         let filteredEvents;
@@ -20,6 +25,11 @@ function initializeCategoryFilter() {
         }
         
         renderFilteredEventCards(filteredEvents);
+
+        
+        // Save to localStorage
+        localStorage.setItem('selectedCategory', category);
+   
     }
     
     // Function to render filtered event cards
@@ -45,28 +55,37 @@ function initializeCategoryFilter() {
                 `).join('');
     }
     
+        // Function to set active tab
+    function setActiveTab(category) {
+        categoryTabs.forEach(tab => {
+            const tabCategory = tab.getAttribute('data-category');
+            if (tabCategory === category) {
+                tab.classList.add('active', 'btn-primary');
+                tab.classList.remove('btn-outline-primary');
+            } else {
+                tab.classList.remove('active', 'btn-primary');
+                tab.classList.add('btn-outline-primary');
+            }
+        });
+    }
     // Add click event listeners to category tabs
     categoryTabs.forEach(tab => {
         tab.addEventListener('click', function() {
-            // Remove active class from all tabs
-            categoryTabs.forEach(t => {
-                t.classList.remove('active', 'btn-primary');
-                t.classList.add('btn-outline-primary');
-            });
-            
-            // Add active class to clicked tab
-            this.classList.add('active', 'btn-primary');
-            this.classList.remove('btn-outline-primary');
-            
-            // Filter events by selected category
             const category = this.getAttribute('data-category');
+            setActiveTab(category);
             filterEventsByCategory(category);
         });
     });
     
-    // Initialize with "All" category
-    filterEventsByCategory('all');
+    // Initialize with saved category or 'all'
+    setActiveTab(savedCategory);
+    filterEventsByCategory(savedCategory);
+    
 }
+
+
+
+
   const eventsData = [
     {
       id: 1,
