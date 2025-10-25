@@ -116,6 +116,42 @@ h6,
   border-radius: 50%;
   padding: 6px 10px;
 }
+
+/* Language Buttons */
+.language-btn {
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.language-btn:hover {
+  transform: translateY(-2px);
+  border-color: white;
+}
+
+.language-btn.active {
+  background-color: white;
+  color: #988561;
+  border-color: white;
+}
+
+.language-btn:not(.active) {
+  background-color: transparent;
+  color: white;
+}
+
+.flag-icon {
+  font-size: 1.2rem;
+}
+
+
 .card {
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   border-width: 2px;

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>دليل مدينة دمشق</title>
+  <title>Damascus City Guide</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="icon" type="image/x-icon" href="./assets/img/icon.png">
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="icon" type="image/x-icon" href="../assets/img/icon.png">
 </head>
 
 <body>
@@ -28,49 +28,42 @@
 
   <header class="shadow-sm sticky-top">
     <nav class="navbar navbar-expand-lg navbar-dark bg-navbar py-2">
-
-
       <div class="container d-flex justify-content-between align-items-center">
 
-
-        <div> <a class="navbar-brand fw-bold text-light " href="index.html">
-            دليل مدينة دمشق
+        <div><a class="navbar-brand fw-bold text-light" href="index.html">
+            Damascus City Guide
           </a></div>
-
 
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul class="navbar-nav nav-pills">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">الرئيسية</a>
+              <a class="nav-link active" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="events.html">كل الفعاليات</a>
+              <a class="nav-link" href="events.html">All Events</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">عن الدليل</a>
+              <a class="nav-link" href="about.html">About the Guide</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">اتصل بنا</a>
+              <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
           </ul>
         </div>
-        <!-- Language and Theme Buttons -->
+
         <div class="d-flex order-2 order-lg-1 mx-3 align-items-center">
-          <!-- Arabic Button -->
-          <button id="lang-ar" class="btn btn-outline-light me-2 language-btn active"  >
+          <button id="lang-ar" class="btn btn-outline-light me-2 language-btn" onclick="window.location.href='../index.html'">
             <span class="flag-icon">🇸🇾</span> AR
           </button>
-          <!-- English Button -->
-          <button id="lang-en" class="btn btn-outline-light me-2 language-btn" onclick="window.location.href='./en/index.html'">
+          <button id="lang-en" class="btn btn-outline-light me-2 language-btn active"  >
             <span class="flag-icon">🇺🇸</span> EN
           </button>
-
         </div>
-        <!-- Dark mode button -->
+
         <button id="theme-toggle" class="btn btn-outline-light order-2 pt-2 order-lg-1">
           <i id="theme-icon" class="bi bi-moon-fill"></i>
         </button>
-        <!-- Toggle button (mobile) -->
+
         <button class="navbar-toggler text-light order-3" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -83,7 +76,7 @@
   <main class="container my-5">
 
     <section id="featured-events" class="mb-5 section-animate fade-in-up">
-      <h2 class="mb-4 text-center">أبرز الفعاليات</h2>
+      <h2 class="mb-4 text-center">Featured Events</h2>
       <div id="eventsCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#eventsCarousel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -93,31 +86,30 @@
         </div>
         <div class="carousel-inner rounded">
           <div class="carousel-item active">
-            <img src="./assets/img/event-5/1.jpg" class="d-block w-100" alt="Featured Event 2" />
+            <img src="../assets/img/event-5/1.jpg" class="d-block w-100" alt="Featured Event 2" />
             <a href="event-5.html">
               <div class="carousel-caption d-none d-md-block">
-                <h5>معرض “هواجس” في ثقافي أبو رمانة</h5>
-                <p>أعمال فنية معاصرة من فنانين محليين وعالميين.</p>
+                <h5>"Hawajis" Exhibition at Abu Rummaneh Cultural Center</h5>
+                <p>Contemporary artworks from local and international artists.</p>
               </div>
             </a>
           </div>
-          <div class="carousel-item ">
-            <img src="./assets/img/event-1/1.jpg" class="d-block w-100" alt="Featured Event 1" />
+          <div class="carousel-item">
+            <img src="../assets/img/event-1/1.jpg" class="d-block w-100" alt="Featured Event 1" />
             <a href="event-1.html">
               <div class="carousel-caption d-none d-md-block">
-                <h5>معرض دمشق الدولي الـ 62</h5>
-                <p>تحت شعار سوريا تستقبل الجميع.</p>
-
+                <h5>62nd Damascus International Fair</h5>
+                <p>Under the slogan: Syria Welcomes Everyone.</p>
               </div>
             </a>
           </div>
 
           <div class="carousel-item">
-            <img src="./assets/img/event-3/1.png" class="d-block w-100" alt="Featured Event 3" />
+            <img src="../assets/img/event-3/1.png" class="d-block w-100" alt="Featured Event 3" />
             <a href="event-3.html">
               <div class="carousel-caption d-none d-md-block">
-                <h5>تكسبو لاند سوريا 2025 - بوابتك نحو المستقبل الرقمي</h5>
-                <p>فرصة لا تعوض للمستثمرين والمشاركين لدخول مجال التكنولوجيا في مختلف القطاعات.</p>
+                <h5>Techspo Land Syria 2025 - Your Gateway to the Digital Future</h5>
+                <p>A golden opportunity for investors and participants to enter the technology sector.</p>
               </div>
             </a>
           </div>
@@ -135,48 +127,46 @@
 
 
     <section id="category-filter" class="mb-5 section-animate fade-in-up delay-1">
-      <h2 class="mb-4 text-center">تصفح حسب التصنيف</h2>
+      <h2 class="mb-4 text-center">Browse by Category</h2>
 
       <div class="text-center mb-4">
-        <!-- Category Badge Tabs -->
         <div class="d-flex flex-wrap justify-content-center gap-2" id="category-tabs">
           <button class="btn btn-primary category-tab active" data-category="all">
-            الكل
+            All
           </button>
           <button class="btn btn-outline-primary category-tab" data-category="معارض">
-            معارض
+            Exhibitions
           </button>
           <button class="btn btn-outline-primary category-tab" data-category="سيارات">
-            سيارات
+            Cars
           </button>
           <button class="btn btn-outline-primary category-tab" data-category="تقنية">
-            تقنية
+            Technology
           </button>
           <button class="btn btn-outline-primary category-tab" data-category="مؤتمرات">
-            مؤتمرات
+            Conferences
           </button>
           <button class="btn btn-outline-primary category-tab" data-category="ثقافة">
-            ثقافة
+            Culture
           </button>
         </div>
       </div>
 
-      <!-- Filtered Events Grid -->
       <div id="filtered-events-grid" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
       </div>
     </section>
 
 
     <section id="latest-events" class="section-animate fade-in-up delay-2">
-      <h2 class="mb-4 text-center">أحدث الفعاليات</h2>
+      <h2 class="mb-4 text-center">Latest Events</h2>
       <div id="events-grid" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center"></div>
     </section>
 
     <section class="text-center mb-0 mt-3 p-4 bg-light-box rounded m">
-      <h1 class="display-4">مشروع دليل مدينة دمشق</h1>
-      <p class="lead">BWP401 - مقدم من قبل:</p>
+      <h1 class="display-4">Damascus City Guide Project</h1>
+      <p class="lead">BWP401 - Presented by:</p>
       <ul class="list-inline">
-        <li class="list-inline-item h5 mx-3">محمد السهلي - ID: mohamad_287009</li>
+        <li class="list-inline-item h5 mx-3">Mohamad AlSahli - ID: mohamad_287009</li>
       </ul>
     </section>
   </main>
@@ -184,20 +174,20 @@
   <footer class="bg-dark text-white">
     <div class="footer-content">
       <div class="footer-section">
-        <h3>دليل مدينة دمشق</h3>
-        <p>دليلك الشامل لاكتشاف أحدث الفعاليات في مدينة دمشق</p>
+        <h3>Damascus City Guide</h3>
+        <p>Your complete guide to discovering the latest events in Damascus.</p>
       </div>
       <div class="footer-section">
-        <h3>روابط سريعة</h3>
+        <h3>Quick Links</h3>
         <ul>
-          <li><a href="index.html">الرئيسية</a></li>
-          <li><a href="events.html">الفعاليات</a></li>
-          <li><a href="about.html">عن الدليل</a></li>
-          <li><a href="contact.html">اتصل بنا</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="about.html">About the Guide</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
       <div class="footer-section">
-        <h3>تواصل معنا</h3>
+        <h3>Contact Us</h3>
         <p>📧 info@damascusguide.sy</p>
         <p>📱 0963993898670</p>
         <div class="social-links">
@@ -208,7 +198,7 @@
       </div>
     </div>
     <div class="copyright">
-      <p>&copy; 2025 دليل مدينة دمشق - الجمهورية العربية السورية. جميع الحقوق محفوظة.</p>
+      <p>&copy; 2025 Damascus City Guide - Syrian Arab Republic. All rights reserved.</p>
     </div>
   </footer>
 
@@ -219,7 +209,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="./en_js/main.js"></script>
 </body>
 
 </html>
